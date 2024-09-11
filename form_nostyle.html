@@ -1,85 +1,131 @@
+<!--HTML로만 tag관련 만들기-->
+<!--
+필수 사용: text, radio, checkbox, select, date, textarea
+선택 사용: fieldset, legend, optgroup, color, datalist
+-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-
-        body{
-            margin: 0%;
-        }
-        #top_list {
-            border: solid #0000001A 1px;
-            border-radius: 5px;
-            padding: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 460px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size:16px;
-
-
-        }
-
-        #middle {
-            background-color: #0000001A;
-            height: 48px;
-        }
-    </style>
+    <title>Assignment2-1</title>
 </head>
 
 <body>
 
-    <br><br><br>
-    <div id="top_list">
-        <img src="./image.png" style="width:32px; height:32px;">
-        <a>
-            &nbsp;&nbsp;List group item heading
-        </a>
-        <a style="float:right;color:#0000001A;">now</a>
+    <form action="/action_form.php">
+        <!--1.text - 총 4개-->
+        <label for="First_name">First name</label>
         <br>
-        <a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some placeholder content in a paragraph.<br>
-        </a>
-
-
-    </div>
-    <div id="top_list">
-        <img src="./image.png" style="width:32px; height:32px;">
-        <a>
-            &nbsp;&nbsp;Another title here
-        </a>
-        <a style="float:right;color:#0000001A;">3d</a>
+        <input type="text" id="First_name" name="first_name">
         <br>
-        <a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some placeholder content in a paragraph that 
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goes a little longer so it wraps to a new line.<br>
-        </a>
 
-
-    </div>
-    <div id="top_list">
-        <img src="./image.png" style="width:32px; height:32px;">
-        <a>
-            &nbsp;&nbsp;Thrid heading
-        </a>
-        <a style="float:right;color:#0000001A;">1w</a>
+        <label for="Last_name">Last name</label>
         <br>
-        <a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some placeholder content in a paragraph.<br>
-        </a>
+        <input type="text" id="Last_name" name="last_name">
+        <br>
 
+        <label for="User_name">Username</label>
+        <br>
+        <input type="text" id="User_name" name="user_name">
+        <br>
+
+        <label for="Address">Address</label>
+        <br>
+        <input type="text" id="Address" name="address">
+        <br>
+        <!--2.select - 총 3개-->
+        <label for="Country">Country</label>
+        <br>
+        <select id="Country" name="country">
+            <option value="Choose...">Choose...</option>
+            <option value="United States">United States</option>
+        </select>
+        <br>
+        <label for="State">State</label>
+        <br>
+        <select id="State" name="state">
+            <option value="Choose...">Choose...</option>
+            <option value="California">California</option>
+        </select>
+        <br>
+        <!--1.text - 총 4개-->
+        <label for="Zip">Zip</label>
+        <br>
+        <input type="text" id="Zip" name="zip">
+        <br>
+        <!--3.radio- 총 1개-->
+        <a>Payment</a>
+        <br>
+        <label for="Payment_1">
+            <input type="radio" id="Payment_1" name="payment">credit card</label><br>
+        <label for="Payment_2">
+            <input type="radio" id="Payment_2" name="payment">Debit card</label><br>
+        <label for="Payment_3">
+            <input type="radio" id="Payment_3" name="payment">PayPal</label><br>
+        <!--1.text - 총 8개-->
+        <label for="Name_on_card">Name on card</label>
+        <br>
+        <input type="text" id="Name_on_card" name="name_on_card">
+        <br>
+
+        <label for="Credit_card_number">Credit card number</label>
+        <br>
+        <input type="text" id="Credit_card_number" name="credit_card_number">
+        <br>
+
+        <label for="Expiration">Expiration</label>
+        <br>
+        <input type="text" id="Expiration" name="expiration">
+        <br>
+
+        <label for="CVV">CVV</label>
+        <br>
+        <input type="text" id="CVV" name="cvv">
+        <br>
+        <!--4.date - 총 1개-->
+        <label for="Order_day">Order day</label>
+        <br>
+        <input type="date" id="Order_day" name="order_day">
+        <br>
+        <!--5.textarea - 총 1개-->
+        <label for="Memo">Memo</label>
+        <br>
+        <textarea id="Memo" name="memo"></textarea>
+        <br>
+        <!--6.checkbox - 총 1개-->
+        <a>Agreement</a>
+        <br>
+        <label for="Check_agree1">
+            <input type="checkbox" id="Check_agree1" name="agree_1" value="Yes">
+            You can know that you can call to me.
+        </label>
+        <br>
+        <label for="Check_agree2">
+            <input type="checkbox" id="Check_agree2" name="agree_2" value="Yes">
+            You read the message from our company form.
+
+        </label>
+
+
+<!--
+        1.text =>8
+        2. select => 3
+        3. radio => 3
+        4. date => 1
+        5. textarea => 1
+        6. checkbox => 2
         
+        총 18개
         
-    </div>
-    <br><br><br>
-    <div id="middle">
-        <br>
-    </div>
+        -->
 
+
+
+
+
+    </form>
 </body>
 
 </html>
