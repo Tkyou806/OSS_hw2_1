@@ -13,103 +13,188 @@
 </head>
 
 <body>
+    <h1>image</h1>
+    <h1>checkout form</h1>
 
     <form action="/action_form.php">
-        <!--1.text - 총 4개-->
-        <label for="First_name">First name</label>
-        <br>
-        <input type="text" id="First_name" name="first_name">
-        <br>
+        <div style="float:left;width:70%;">
+            <h3>Billing address</h3>
+            <!--1.text - 총 4개-->
+            <div style="float:left;width:50%">
+                <label for="First_name">First name</label>
+                <br>
+                <input type="text" id="First_name" name="first_name">
+                <br>
+            </div>
+            <div>
+                <label for="Last_name">Last name</label>
+                <br>
+                <input type="text" id="Last_name" name="last_name">
+                <br>
+            </div>
+            <div>
+                <label for="User_name">Username</label>
+                <br>
+                <input type="text" id="User_name" name="user_name">
+                <br>
+                <label for="Email">Email (Optional)</label>
+                <br>
+                <input type="email" id="User_name" name="user_name">
+                <br>
 
-        <label for="Last_name">Last name</label>
-        <br>
-        <input type="text" id="Last_name" name="last_name">
-        <br>
+                <label for="Address">Address</label>
+                <br>
+                <input type="text" id="Address" name="address">
+                <br>
+                <label for="Address2">Address 2 (Optional)</label>
+                <br>
+                <input type="text" id="Address2" name="address2">
+                <br>
+            </div>
+            <!--2.select - 총 3개-->
+            <div>
+                <div style="float:left;width:30%;">
+                    <label for="Country">Country</label>
+                    <br>
+                    <select id="Country" name="country">
+                        <option value="Choose...">Choose...</option>
+                        <option value="United States">United States</option>
+                    </select>
+                    <br>
+                </div>
+                <div style="float:left;width:30%">
+                    <label for="State">State</label>
+                    <br>
+                    <select id="State" name="state">
+                        <option value="Choose...">Choose...</option>
+                        <option value="California">California</option>
+                    </select>
+                    <br>
+                </div>
+                <!--1.text - 총 4개-->
+                <div>
+                    <label for="Zip" style="width:30%">Zip</label>
+                    <br>
+                    <input type="text" id="Zip" name="zip">
+                    <br>
+                </div>
+            </div>
+            <div>
+                <!--3.checkbox - 총 2개-->
+                <label for="Check_agree1">
+                    <input type="checkbox" id="Check_agree1" name="agree_1" value="Yes">
+                    Shipping address is the same as my billing address
+                </label>
+                <br>
+                <label for="Check_agree2">
+                    <input type="checkbox" id="Check_agree2" name="agree_2" value="Yes">
+                    Save this information for next time
 
-        <label for="User_name">Username</label>
-        <br>
-        <input type="text" id="User_name" name="user_name">
-        <br>
+                </label>
+            </div>
+            <h3>Payment</h3>
+            <!--4.radio- 총 1개-->
+            <div>
+                <label for="Payment_1">
+                    <input type="radio" id="Payment_1" name="payment">credit card</label><br>
+                <label for="Payment_2">
+                    <input type="radio" id="Payment_2" name="payment">Debit card</label><br>
+                <label for="Payment_3">
+                    <input type="radio" id="Payment_3" name="payment">PayPal</label><br>
+            </div>
+            <div>
+                <div style="float:left;width:50%">
+                    <!--1.text - 총 8개-->
+                    <label for="Name_on_card">Name on card</label>
+                    <br>
+                    <input type="text" id="Name_on_card" name="name_on_card">
+                    <br>
+                </div>
+                <div style="float:right;width:50%">
+                    <label for="Credit_card_number">Credit card number</label>
+                    <br>
+                    <input type="text" id="Credit_card_number" name="credit_card_number">
+                    <br>
+                </div>
+            </div>
+            <div>
+                <div style="float:left;width:50%">
+                    <div style="float:left;width:50%">
+                        <label for="Expiration">Expiration</label>
+                        <br>
+                        <input type="text" id="Expiration" name="expiration">
+                        <br>
+                    </div>
+                    <div style="float:right;width:50%">
+                        <label for="CVV">CVV</label>
+                        <br>
+                        <input type="text" id="CVV" name="cvv">
+                        <br>
+                    </div>
+                </div>
+                <div style="float:right;width:50%">
+                    <br><br><br>
+                </div>
+            </div>
+            <br>
+            <div style="float:left;width:100%">
+                <!--5.date - 총 1개-->
+                <label for="Order_day">Order day</label>
+                <br>
+                <input type="date" id="Order_day" name="order_day">
+                <br>
+                <br>
+            </div>
 
-        <label for="Address">Address</label>
-        <br>
-        <input type="text" id="Address" name="address">
-        <br>
-        <!--2.select - 총 3개-->
-        <label for="Country">Country</label>
-        <br>
-        <select id="Country" name="country">
-            <option value="Choose...">Choose...</option>
-            <option value="United States">United States</option>
-        </select>
-        <br>
-        <label for="State">State</label>
-        <br>
-        <select id="State" name="state">
-            <option value="Choose...">Choose...</option>
-            <option value="California">California</option>
-        </select>
-        <br>
-        <!--1.text - 총 4개-->
-        <label for="Zip">Zip</label>
-        <br>
-        <input type="text" id="Zip" name="zip">
-        <br>
-        <!--3.checkbox - 총 2개-->
-        <label for="Check_agree1">
-            <input type="checkbox" id="Check_agree1" name="agree_1" value="Yes">
-            Shipping address is the same as my billing address
-        </label>
-        <br>
-        <label for="Check_agree2">
-            <input type="checkbox" id="Check_agree2" name="agree_2" value="Yes">
-            Save this information for next time
 
-        </label>
+            <!--6.textarea - 총 1개-->
+            <h3>Memo</h3>
+            <div>
+                <textarea id="Memo" name="memo">Memo</textarea>
 
-        
-        <!--4.radio- 총 1개-->
-        <a>Payment</a>
-        <br>
-        <label for="Payment_1">
-            <input type="radio" id="Payment_1" name="payment">credit card</label><br>
-        <label for="Payment_2">
-            <input type="radio" id="Payment_2" name="payment">Debit card</label><br>
-        <label for="Payment_3">
-            <input type="radio" id="Payment_3" name="payment">PayPal</label><br>
-        <!--1.text - 총 8개-->
-        <label for="Name_on_card">Name on card</label>
-        <br>
-        <input type="text" id="Name_on_card" name="name_on_card">
-        <br>
+            </div>
 
-        <label for="Credit_card_number">Credit card number</label>
-        <br>
-        <input type="text" id="Credit_card_number" name="credit_card_number">
-        <br>
 
-        <label for="Expiration">Expiration</label>
-        <br>
-        <input type="text" id="Expiration" name="expiration">
-        <br>
+            <div>
 
-        <label for="CVV">CVV</label>
-        <br>
-        <input type="text" id="CVV" name="cvv">
-        <br>
-        <!--5.date - 총 1개-->
-        <label for="Order_day">Order day</label>
-        <br>
-        <input type="date" id="Order_day" name="order_day">
-        <br>
-        <!--6.textarea - 총 1개-->
-        <label for="Memo">Memo</label>
-        <br>
-        <textarea id="Memo" name="memo"></textarea>
-        <br>
-        
+                <input type="submit" value="Continue to Checkout">
+            </div>
 
-<!--
+            <div style="float:right;width:35%;">
+                <h5>
+                    2017-2022 Company Name<br>
+                    <a>Privacy</a><a>Terms</a><a>Support</a>
+                </h5>
+            </div>
+        </div>
+        <div style="float:right;width:30%;"><!--오른쪽 박스 :얘도 이렇게 마추니까 편하다-->
+            <div>
+                <div>
+                    <h3><a>Your cart</a> <a style="float:right">3</a></h3>
+                </div>
+                <div>
+                    <div>
+                        <a>Product name</a> <a style="float:right;">$12</a>
+                        <br>
+                        <a>Brief description</a>
+                    </div>
+
+                    <div><a>Second Product</a> <a style="float:right;">$8</a></div>
+                    <div><a>Third item</a> <a style="float:right;">$5</a></div>
+                    <div><a>Promote code</a> <a style="float:right;">-$5</a></div>
+                    <div><a>Total (USD)</a> <a style="float:right;">$20</a></div>
+                </div>
+                <div>
+                    <lable for="Redeem">
+                        <input type="text"><button>Redeem
+                    </lable>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--
         1.text =>8
         2. select => 3
         3. radio => 3
@@ -126,6 +211,8 @@
 
 
     </form>
+
+
 </body>
 
 </html>
