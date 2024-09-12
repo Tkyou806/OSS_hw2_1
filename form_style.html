@@ -22,10 +22,14 @@
 
 
         #div_1 {
-            width: 65%;
+            float:left;
+            width:65%;
         }
 
-        #div_2 {}
+        #div_2 {
+            float: right;
+            width: 30%;
+        }
 
         h1 {
             text-align: center;
@@ -180,6 +184,35 @@
             border: solid #b3b6b7 1px;
             height: 0px;
         }
+
+        #last{
+            float:right;
+            width:35%;
+        }
+
+        @media(max-width: 800px) {
+            body {
+                margin-right:3%;
+                margin-left:3%;
+                width: 94%;
+            }
+            #title,
+            .p,
+            #div_1,
+            #div_2
+            {
+                width: 100%;
+                padding:0%;
+                margin:0%;
+                float: none;
+
+            }
+
+            #last{
+                width:100%;
+                text-align: center;
+            } 
+        }
     </style>
 </head>
 
@@ -194,7 +227,58 @@
     <br>
     <br>
     <form action="/action_form.php">
-        <div id="div_1" style="float:left;width:70%-20px;">
+        <div id="div_2"><!--오른쪽 박스 :얘도 이렇게 마추니까 편하다-->
+            <div>
+                <div>
+                    <h3 id="middle_title"><a>Your cart</a> <a id="side_style1" style="float:right">3</a></h3>
+                </div>
+                <div>
+                    <div id="div_side" style="border-top-left-radius:5px;border-top-right-radius:5px;">
+                        <a>Product name</a> <a id="side_style2" style="float:right">$12</a>
+                        <br>
+                        <a id="side_style3">Brief description</a>
+                    </div>
+
+                    <div id="div_side">
+                        <a>Second Product</a> <a id="side_style2" style="float:right;">$8</a>
+                        <br>
+                        <a id="side_style3">Brief description</a>
+                    </div>
+                    <div id="div_side">
+                        <a>Third item</a> <a id="side_style2" style="float:right;">$5</a>
+                        <br>
+                        <a id="side_style3">Brief description</a>
+                    </div>
+                    <div id="div_side">
+                        <a>Promote code</a> <a id="side_style2" style="float:right;">-$5</a>
+                        <br>
+                        <a id="side_style3">Brief description</a>
+                    </div>
+                    <div id="div_side" style="border-bottom-left-radius:5px;border-bottom-right-radius:5px;">
+                        <a>Total (USD)</a> <a style="float:right;">$20</a>
+                    </div>
+                </div>
+
+                <div id="div_side" style="margin-top:15px;border-radius:5px;">
+                    <div style="float:left;width:70%;">
+                        <lable for="Promote">
+                            <input type="text" id="Promote">
+                        </lable>
+                    </div>
+                    <div style="float:right;width:30%;margin-left:0%;">
+                        <label for="Submit"></label>
+                        <input type="submit" id="Submit" value="Redeem"></a>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div id="div_1">
             <h3>Billing address</h3>
             <!--1.text - 총 4개-->
             <div style="float:left;width:50%">
@@ -337,7 +421,7 @@
             <!--6.textarea - 총 1개-->
             <h3>Memo</h3>
             <div>
-                <textarea id="Memo" name="memo" style="width:50%;height:200px;">Memo</textarea>
+                <textarea id="Memo" name="memo" style="width:50%;height:200px;"></textarea>
 
             </div>
 
@@ -347,7 +431,7 @@
                 <input type="submit" id="continue" value="Continue to Checkout">
             </div>
 
-            <div style="float:right;width:35%;">
+            <div id="last">
                 <h5>
                     2017-2022 Company Name<br>
                     <a id="a_style">Privacy</a>
@@ -355,59 +439,10 @@
                     &nbsp;&nbsp;<a id="a_style">Support</a>
                 </h5>
             </div>
-        </div>
-        <div style="float:right;width:30%;"><!--오른쪽 박스 :얘도 이렇게 마추니까 편하다-->
-            <div>
-                <div>
-                    <h3 id="middle_title"><a>Your cart</a> <a id="side_style1" style="float:right">3</a></h3>
-                </div>
-                <div>
-                    <div id="div_side" style="border-top-left-radius:5px;border-top-right-radius:5px;">
-                        <a>Product name</a> <a id="side_style2" style="float:right">$12</a>
-                        <br>
-                        <a id="side_style3">Brief description</a>
-                    </div>
-
-                    <div id="div_side">
-                        <a>Second Product</a> <a id="side_style2" style="float:right;">$8</a>
-                        <br>
-                        <a id="side_style3">Brief description</a>
-                    </div>
-                    <div id="div_side">
-                        <a>Third item</a> <a id="side_style2" style="float:right;">$5</a>
-                        <br>
-                        <a id="side_style3">Brief description</a>
-                    </div>
-                    <div id="div_side">
-                        <a>Promote code</a> <a id="side_style2" style="float:right;">-$5</a>
-                        <br>
-                        <a id="side_style3">Brief description</a>
-                    </div>
-                    <div id="div_side" style="border-bottom-left-radius:5px;border-bottom-right-radius:5px;">
-                        <a>Total (USD)</a> <a style="float:right;">$20</a>
-                    </div>
-                </div>
-
-                <div id="div_side" style="margin-top:15px;border-radius:5px;">
-                    <div style="float:left;width:70%;">
-                        <lable for="Promote">
-                            <input type="text" id="Promote">
-                        </lable>
-                    </div>
-                    <div style="float:right;width:30%;margin-left:0%;">
-                        <label for="Submit"></label>
-                        <input type="submit" id="Submit" value="Redeem"></a>
-                    </div>
-                    <br>
-                    <br>
-                </div>
-
-            </div>
-        </div>
 
 
 
-        <!--
+            <!--
         1.text =>8
         2. select => 3
         3. radio => 3
