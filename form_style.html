@@ -10,106 +10,404 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment2-1</title>
+    <style>
+        body {
+            background-color: #F8F9FA;
+            width: 60%;
+            margin-left: 20%;
+
+
+        }
+
+
+
+        #div_1 {
+            width: 65%;
+        }
+
+        #div_2 {}
+
+        h1 {
+            text-align: center;
+        }
+
+
+        img {
+            margin-top: 5%;
+            margin-left: 45%;
+            width: 72px;
+            height: 57px;
+
+        }
+
+        p {
+            text-align: center;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=date],
+        textarea {
+            border: solid #cdcecf 1px;
+            border-radius: 5px;
+            height: 35px;
+            margin-bottom: 20px;
+
+        }
+
+        #continue {
+            background-color: #0D6EFD;
+            border: #0D6EFD;
+            border-radius: 5px;
+            color: white;
+            font-size: large;
+            width: 100%;
+            height: 47px;
+
+
+        }
+
+        #middle_title {
+            color: #0D6EFD;
+
+        }
+
+        #div_side {
+            background-color: white;
+            border: solid #cdcecf 1px;
+            padding: 10px;
+        }
+
+        #side_style1 {
+            background-color: #0D6EFD;
+            color: white;
+            border-radius: 15px;
+            padding: 1px 10px;
+        }
+
+        #side_style2 {
+            color: rgb(107, 103, 103);
+            border-radius: 15px;
+
+        }
+
+        #side_style3 {
+            color: rgb(107, 103, 103);
+            border-radius: 15px;
+            font-size: small;
+        }
+
+        #button {
+            background-color: rgb(33, 32, 32);
+        }
+
+        .input_pair {
+            width: 95%;
+
+        }
+
+        .third_pair {
+            width: 95%;
+
+        }
+
+        select {
+            border: solid #cdcecf 1px;
+            border-radius: 5px;
+            height: 35px;
+        }
+
+        input {
+            width: 100%;
+
+        }
+
+        input[type=checkbox] {
+            border: solid #6C757D 1px;
+            width: 10%;
+            margin-top: 10px;
+            margin-left: 0%;
+            padding-left: 0%;
+            margin-bottom: 10px;
+        }
+
+        input[type=radio] {
+            border: solid #6C757D 1px;
+            width: 10%;
+            margin-top: 10px;
+            margin-left: 0%;
+            padding-left: 0%;
+            margin-bottom: 10px;
+        }
+
+
+        #Check_agree1 {
+            font-size: small;
+        }
+
+        #Check_agree2 {
+            font-size: small;
+        }
+
+        #Promote {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        #Submit {
+            background-color: #6C757D;
+            color: white;
+            font-weight: 600;
+            width: 100%;
+            border: solid #6C757D;
+            border-radius: 0px 5px 5px 0px;
+            height: 40px;
+        }
+
+        h5 {
+            margin-top: 100px;
+            color: #6C757D;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        #a_style {
+            color: #0D6EFD;
+            text-decoration: underline;
+        }
+
+        #line {
+            border: solid #b3b6b7 1px;
+            height: 0px;
+        }
+    </style>
 </head>
 
 <body>
+    <img src="./bootstrap-logo.svg"></img>
+    <h1 id="title">checkout form</h1>
+    <div>
+        <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a
+            validation state that can be triggered by attempting to submit the form without completing it.</p>
 
+    </div>
+    <br>
+    <br>
     <form action="/action_form.php">
-        <!--1.text - 총 4개-->
-        <label for="First_name">First name</label>
-        <br>
-        <input type="text" id="First_name" name="first_name">
-        <br>
+        <div id="div_1" style="float:left;width:70%-20px;">
+            <h3>Billing address</h3>
+            <!--1.text - 총 4개-->
+            <div style="float:left;width:50%">
 
-        <label for="Last_name">Last name</label>
-        <br>
-        <input type="text" id="Last_name" name="last_name">
-        <br>
+                <label for="First_name">First name</label>
+                <br>
+                <input type="text" id="First_name" class="input_pair" name="first_name">
+                <br>
+            </div>
+            <div style="float:right;width:50%">
+                <label for="Last_name">Last name</label>
+                <br>
+                <input type="text" id="Last_name" name="last_name">
+                <br>
+            </div>
+            <div>
+                <label for="User_name">Username</label>
+                <br>
+                <input type="text" id="User_name" name="user_name">
+                <br>
+                <label for="Email">Email (Optional)</label>
+                <br>
+                <input type="email" id="Email" name="email">
+                <br>
 
-        <label for="User_name">Username</label>
-        <br>
-        <input type="text" id="User_name" name="user_name">
-        <br>
+                <label for="Address">Address</label>
+                <br>
+                <input type="text" id="Address" name="address">
+                <br>
+                <label for="Address2">Address 2 (Optional)</label>
+                <br>
+                <input type="text" id="Address2" name="address2">
+                <br>
+            </div>
+            <!--2.select - 총 3개-->
+            <div>
+                <div style="float:left;width:45%;">
+                    <label for="Country">Country</label>
+                    <br>
+                    <select id="Country" class="third_pair" name="country">
+                        <option value="Choose...">Choose...</option>
+                        <option value="United States">United States</option>
+                    </select>
+                    <br>
+                </div>
+                <div style="float:left;width:30%">
+                    <label for="State">State</label>
+                    <br>
+                    <select id="State" class="third_pair" name="state">
+                        <option value="Choose...">Choose...</option>
+                        <option value="California">California</option>
+                    </select>
+                    <br>
+                </div>
+                <!--1.text - 총 4개-->
+                <div style="float:left;width:25%">
+                    <label for="Zip">Zip</label>
+                    <br>
+                    <input type="text" id="Zip" name="zip">
+                    <br>
+                </div>
+            </div>
 
-        <label for="Address">Address</label>
-        <br>
-        <input type="text" id="Address" name="address">
-        <br>
-        <!--2.select - 총 3개-->
-        <label for="Country">Country</label>
-        <br>
-        <select id="Country" name="country">
-            <option value="Choose...">Choose...</option>
-            <option value="United States">United States</option>
-        </select>
-        <br>
-        <label for="State">State</label>
-        <br>
-        <select id="State" name="state">
-            <option value="Choose...">Choose...</option>
-            <option value="California">California</option>
-        </select>
-        <br>
-        <!--1.text - 총 4개-->
-        <label for="Zip">Zip</label>
-        <br>
-        <input type="text" id="Zip" name="zip">
-        <br>
-        <!--3.checkbox - 총 2개-->
-        <label for="Check_agree1">
-            <input type="checkbox" id="Check_agree1" name="agree_1" value="Yes">
-            Shipping address is the same as my billing address
-        </label>
-        <br>
-        <label for="Check_agree2">
-            <input type="checkbox" id="Check_agree2" name="agree_2" value="Yes">
-            Save this information for next time
 
-        </label>
+            <h5 id="line" style="width:100%;"></h5>
 
-        
-        <!--4.radio- 총 1개-->
-        <a>Payment</a>
-        <br>
-        <label for="Payment_1">
-            <input type="radio" id="Payment_1" name="payment">credit card</label><br>
-        <label for="Payment_2">
-            <input type="radio" id="Payment_2" name="payment">Debit card</label><br>
-        <label for="Payment_3">
-            <input type="radio" id="Payment_3" name="payment">PayPal</label><br>
-        <!--1.text - 총 8개-->
-        <label for="Name_on_card">Name on card</label>
-        <br>
-        <input type="text" id="Name_on_card" name="name_on_card">
-        <br>
 
-        <label for="Credit_card_number">Credit card number</label>
-        <br>
-        <input type="text" id="Credit_card_number" name="credit_card_number">
-        <br>
+            <div>
 
-        <label for="Expiration">Expiration</label>
-        <br>
-        <input type="text" id="Expiration" name="expiration">
-        <br>
+                <!--3.checkbox - 총 2개-->
+                <label for="Check_agree1">
 
-        <label for="CVV">CVV</label>
-        <br>
-        <input type="text" id="CVV" name="cvv">
-        <br>
-        <!--5.date - 총 1개-->
-        <label for="Order_day">Order day</label>
-        <br>
-        <input type="date" id="Order_day" name="order_day">
-        <br>
-        <!--6.textarea - 총 1개-->
-        <label for="Memo">Memo</label>
-        <br>
-        <textarea id="Memo" name="memo"></textarea>
-        <br>
-        
+                    <input type="checkbox" id="Check_agree1" name="agree_1" value="Yes">
 
-<!--
+                    Shipping address is the same as my billing address
+                </label>
+                <br>
+                <label for="Check_agree2">
+                    <input type="checkbox" id="Check_agree2" name="agree_2" value="Yes">
+                    Save this information for next time
+
+                </label>
+            </div>
+            <h6 id="line" style="width:100%;"></h6>
+            <h3>Payment</h3>
+            <!--4.radio- 총 1개-->
+            <div>
+                <label for="Payment_1">
+                    <input type="radio" id="Payment_1" name="payment">credit card</label><br>
+                <label for="Payment_2">
+                    <input type="radio" id="Payment_2" name="payment">Debit card</label><br>
+                <label for="Payment_3">
+                    <input type="radio" id="Payment_3" name="payment">PayPal</label><br>
+            </div>
+            <div>
+                <div id="div_2" style="float:left;width:50%">
+                    <!--1.text - 총 8개-->
+                    <label for="Name_on_card">Name on card</label>
+                    <br>
+                    <input type="text" id="Name_on_card" class="input_pair" name="name_on_card">
+                    <br>
+                </div>
+                <div style="float:right;width:50%">
+                    <label for="Credit_card_number">Credit card number</label>
+                    <br>
+                    <input type="text" id="Credit_card_number" name="credit_card_number">
+                    <br>
+                </div>
+            </div>
+            <div>
+                <div style="float:left;width:50%">
+                    <div style="float:left;width:50%">
+                        <label for="Expiration">Expiration</label>
+                        <br>
+                        <input type="text" id="Expiration" class="input_pair" name="expiration">
+                        <br>
+                    </div>
+                    <div style="float:right;width:50%">
+                        <label for="CVV">CVV</label>
+                        <br>
+                        <input type="text" id="CVV" style="width:90%;" name="cvv">
+                        <br>
+                    </div>
+                </div>
+                <div style="float:right;width:50%">
+                    <br><br><br>
+                </div>
+            </div>
+            <br>
+            <div style="float:left;width:100%">
+                <!--5.date - 총 1개-->
+                <label for="Order_day">Order day</label>
+                <br>
+                <input type="date" id="Order_day" name="order_day">
+                <br>
+                <br>
+            </div>
+
+
+            <!--6.textarea - 총 1개-->
+            <h3>Memo</h3>
+            <div>
+                <textarea id="Memo" name="memo">Memo</textarea>
+
+            </div>
+
+            <h5 id="line" style="width:100%;"></h5>
+            <div>
+
+                <input type="submit" id="continue" value="Continue to Checkout">
+            </div>
+
+            <div style="float:right;width:35%;">
+                <h5>
+                    2017-2022 Company Name<br>
+                    <a id="a_style">Privacy</a>
+                    &nbsp;&nbsp;<a id="a_style">Terms</a>
+                    &nbsp;&nbsp;<a id="a_style">Support</a>
+                </h5>
+            </div>
+        </div>
+        <div style="float:right;width:30%;"><!--오른쪽 박스 :얘도 이렇게 마추니까 편하다-->
+            <div>
+                <div>
+                    <h3 id="middle_title"><a>Your cart</a> <a id="side_style1" style="float:right">3</a></h3>
+                </div>
+                <div>
+                    <div id="div_side" style="border-top-left-radius:5px;border-top-right-radius:5px;">
+                        <a>Product name</a> <a id="side_style2" style="float:right">$12</a>
+                        <br>
+                        <a id="side_style3">Brief description</a>
+                    </div>
+
+                    <div id="div_side">
+                        <a>Second Product</a> <a id="side_style2" style="float:right;">$8</a>
+                        <br>
+                        <a id="side_style3">Brief description</a>
+                    </div>
+                    <div id="div_side">
+                        <a>Third item</a> <a id="side_style2" style="float:right;">$5</a>
+                        <br>
+                        <a id="side_style3">Brief description</a>
+                    </div>
+                    <div id="div_side">
+                        <a>Promote code</a> <a id="side_style2" style="float:right;">-$5</a>
+                        <br>
+                        <a id="side_style3">Brief description</a>
+                    </div>
+                    <div id="div_side" style="border-bottom-left-radius:5px;border-bottom-right-radius:5px;">
+                        <a>Total (USD)</a> <a style="float:right;">$20</a>
+                    </div>
+                </div>
+
+                <div id="div_side" style="margin-top:15px;border-radius:5px;">
+                    <div style="float:left;width:70%;">
+                        <lable for="Promote">
+                            <input type="text" id="Promote">
+                        </lable>
+                    </div>
+                    <div style="float:right;width:30%;margin-left:0%;">
+                        <label for="Submit"></label>
+                        <input type="submit" id="Submit" value="Redeem"></a>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!--
         1.text =>8
         2. select => 3
         3. radio => 3
@@ -126,6 +424,8 @@
 
 
     </form>
+
+
 </body>
 
 </html>
