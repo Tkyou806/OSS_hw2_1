@@ -22,8 +22,8 @@
 
 
         #div_1 {
-            float:left;
-            width:65%;
+            float: left;
+            width: 65%;
         }
 
         #div_2 {
@@ -185,33 +185,33 @@
             height: 0px;
         }
 
-        #last{
-            float:right;
-            width:35%;
+        #last {
+            float: right;
+            width: 35%;
         }
 
         @media(max-width: 800px) {
             body {
-                margin-right:3%;
-                margin-left:3%;
+                margin-right: 3%;
+                margin-left: 3%;
                 width: 94%;
             }
+
             #title,
             .p,
             #div_1,
-            #div_2
-            {
+            #div_2 {
                 width: 100%;
-                padding:0%;
-                margin:0%;
+                padding: 0%;
+                margin: 0%;
                 float: none;
 
             }
 
-            #last{
-                width:100%;
+            #last {
+                width: 100%;
                 text-align: center;
-            } 
+            }
         }
     </style>
 </head>
@@ -250,9 +250,10 @@
                         <a id="side_style3">Brief description</a>
                     </div>
                     <div id="div_side">
-                        <a>Promote code</a> <a id="side_style2" style="float:right;">-$5</a>
+                        <a style="color:#198754;">Promote code</a> <a id="side_style2"
+                            style="float:right;color:#198754;">-$5</a>
                         <br>
-                        <a id="side_style3">Brief description</a>
+                        <a id="side_style3" style="color:#198754;">Brief description</a>
                     </div>
                     <div id="div_side" style="border-bottom-left-radius:5px;border-bottom-right-radius:5px;">
                         <a>Total (USD)</a> <a style="float:right;">$20</a>
@@ -297,7 +298,14 @@
             <div>
                 <label for="User_name">Username</label>
                 <br>
-                <input type="text" id="User_name" name="user_name">
+                <div>
+                    <div
+                        style="float:left;background-color:#E9ECEF; border:solid #6C757D 1px;width:30px;height:36px;text-align:center;vertical-align: bottom; border-radius:5px 0px 0px 5px;">
+                        @</div>
+                    <div style="float:right;width:calc(100% - 31.6px);">
+                        <input type="text" style="border-radius:0px 5px 5px 0px;" id="User_name" name="user_name">
+                    </div>
+                </div>
                 <br>
                 <label for="Email">Email (Optional)</label>
                 <br>
@@ -372,6 +380,7 @@
                     <input type="radio" id="Payment_2" name="payment">Debit card</label><br>
                 <label for="Payment_3">
                     <input type="radio" id="Payment_3" name="payment">PayPal</label><br>
+                <br>
             </div>
             <div>
                 <div id="div_2" style="float:left;width:50%">
@@ -386,6 +395,7 @@
                     <br>
                     <input type="text" id="Credit_card_number" name="credit_card_number">
                     <br>
+
                 </div>
             </div>
             <div>
