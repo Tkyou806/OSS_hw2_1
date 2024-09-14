@@ -56,7 +56,7 @@
             border: solid #cdcecf 1px;
             border-radius: 5px;
             height: 35px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
 
         }
 
@@ -191,6 +191,15 @@
             width: 35%;
         }
 
+        .feedback {
+            display: none;
+            width: 100%;
+            margin-top: 0%;
+            font-size: .875em;
+            color: red;
+
+        }
+
         @media(max-width: 800px) {
             body {
                 margin-right: 3%;
@@ -285,16 +294,23 @@
             <!--1.text - 총 4개-->
             <div style="float:left;width:50%">
 
-                <label for="First_name" >First name</label>
+                <label for="First_name">First name</label>
                 <br>
-                <input type="text" id="First_name" class="input_pair" name="first_name" required>
+                <input type="text" id="First_name" class="input_pair" name="first_name" placeholder value required>
                 <br>
+                <br>
+                <div class="feedback">
+                    Vaild first name is required.</div>
             </div>
             <div style="float:right;width:50%">
                 <label for="Last_name">Last name</label>
                 <br>
-                <input type="text" id="Last_name" name="last_name">
+                <input type="text" id="Last_name" name="last_name" placeholder value required>
                 <br>
+                <br>
+                <div class="feedback">
+                    Vaild last name is required.
+                </div>
             </div>
             <div>
                 <label for="User_name">Username</label>
@@ -304,7 +320,11 @@
                         style="float:left;background-color:#E9ECEF; border:solid #6C757D 1px;width:30px;height:36px;text-align:center;vertical-align: bottom; border-radius:5px 0px 0px 5px;">
                         @</div>
                     <div style="float:right;width:calc(100% - 31.6px);">
-                        <input type="text" style="border-radius:0px 5px 5px 0px;" id="User_name" name="user_name" placeholder="Username" onchange="">
+                        <input type="text" style="border-radius:0px 5px 5px 0px;" id="User_name" name="user_name"
+                            placeholder="Username" onchange="" placeholder value required>
+                        <div class="feedback">
+                            Your username is required.
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -315,8 +335,12 @@
 
                 <label for="Address">Address</label>
                 <br>
-                <input type="text" id="Address" name="address" placeholder="1234 Main St" onchange="">
+                <input type="text" id="Address" name="address" placeholder="1234 Main St" onchange="" placeholder value
+                    required>
                 <br>
+                <div class="feedback">
+                    Please enter your shipping address.
+                </div>
                 <label for="Address2">Address 2 (Optional)</label>
                 <br>
                 <input type="text" id="Address2" name="address2" placeholder="Apartment or suite" onchange="">
@@ -327,20 +351,22 @@
                 <div style="float:left;width:45%;">
                     <label for="Country">Country</label>
                     <br>
-                    <select id="Country" class="third_pair" name="country">
+                    <select id="Country" class="third_pair" name="country" aria-placeholder value required>
                         <option value="Choose...">Choose...</option>
                         <option value="United States">United States</option>
                     </select>
                     <br>
+                    <div class="feedback">please select a valid country.</div>
                 </div>
                 <div style="float:left;width:30%">
                     <label for="State">State</label>
                     <br>
-                    <select id="State" class="third_pair" name="state">
+                    <select id="State" class="third_pair" name="state" aria-placeholder value required>
                         <option value="Choose...">Choose...</option>
                         <option value="California">California</option>
                     </select>
                     <br>
+                    <div class="feedback">please provide a valid state.</div>
                 </div>
                 <!--1.text - 총 4개-->
                 <div style="float:left;width:25%">
@@ -348,6 +374,7 @@
                     <br>
                     <input type="number" id="Zip" name="zip">
                     <br>
+                    <div class="feedback">Zip code required.</div>
                 </div>
             </div>
 
@@ -376,7 +403,7 @@
             <!--4.radio- 총 1개-->
             <div>
                 <label for="Payment_1">
-                    <input type="radio" id="Payment_1" name="payment">credit card</label><br>
+                    <input type="radio" id="Payment_1" name="payment" checked="checked">credit card</label><br>
                 <label for="Payment_2">
                     <input type="radio" id="Payment_2" name="payment">Debit card</label><br>
                 <label for="Payment_3">
@@ -388,16 +415,19 @@
                     <!--1.text - 총 8개-->
                     <label for="Name_on_card">Name on card</label>
                     <br>
-                    <input type="text" id="Name_on_card" class="input_pair" name="name_on_card" style="margin-bottom:0%">
-                    <a style="font-size:13px;color:gray">Full name as displayed on card</a>                           
+                    <input type="text" id="Name_on_card" class="input_pair" name="name_on_card" style="margin-bottom:0%"
+                        placeholder value required>
+                    <a style="font-size:13px;color:gray">Full name as displayed on card</a>
                     <br>
+                    <div class="feedback">Name on card is required</div>
                     <br>
                 </div>
-                
+
                 <div style="float:right;width:50%">
                     <label for="Credit_card_number">Credit card number</label>
                     <br>
-                    <input type="number" id="Credit_card_number" name="credit_card_number">
+                    <input type="number" id="Credit_card_number" name="credit_card_number" placeholder value required>
+                    <div class="feedback">Credit card number is required</div>
                     <br>
                     <br>
                     <br>
@@ -408,13 +438,16 @@
                     <div style="float:left;width:50%">
                         <label for="Expiration">Expiration</label>
                         <br>
-                        <input type="date" id="Expiration" class="input_pair" name="expiration">
+                        <input type="date" id="Expiration" class="input_pair" name="expiration" placeholder value
+                            required>
+                        <div class="feedback">Expiration date required</div>
                         <br>
                     </div>
                     <div style="float:right;width:50%">
                         <label for="CVV">CVV</label>
                         <br>
-                        <input type="number" id="CVV" style="width:90%;" name="cvv">
+                        <input type="number" id="CVV" style="width:90%;" name="cvv" placeholder value required>
+                        <div class="feedback">Security code required</div>
                         <br>
                     </div>
                 </div>
@@ -427,7 +460,8 @@
                 <!--5.date - 총 1개-->
                 <label for="Order_day">Order day</label>
                 <br>
-                <input type="date" id="Order_day" name="order_day">
+                <input type="date" id="Order_day" name="order_day" placeholder value required>
+                <div class="feedback">Order date is required</div>
                 <br>
                 <br>
             </div>
@@ -493,103 +527,180 @@
 
 
                 let check = document.getElementById('continue');
+                let s = document.getElementsByClassName('feedback');
+                let t = false;
+
+                //변화
+
+                function handle() {
+                    if (name1.value != "") {
+                        s[0].style.display = 'none';
+                    }
+
+                    if (name2.value != "") {
+                        s[1].style.display = 'none';
+                    }
+
+                    if (username.value != "") {
+                        s[2].style.display = 'none';
+                    }
+
+                    //email은 option!
+
+                    //Address
+                    if (address.value != "") {
+                        s[3].style.display = 'none';
+                    }
+                    //Country, State, Zip!
+                    if (country.value != "Choose...") {
+                        s[4].style.display = 'none';
+                    }
+                    if (state.value != "Choose...") {
+                        s[5].style.display = 'none';
+                    }
+                    if (zip.value != "") {
+                        s[6].style.display = 'none';
+                    }
+
+                    //checkbox Agreement is OK
+
+
+
+
+                    //Payment (radio) is OK
+
+                    //Name on card, Credit card number
+                    if (oncard.value != "") {
+                        s[7].style.display = 'none';
+                    }
+
+                    if (credit.value != "") {
+                        s[8].style.display = 'none';
+                    }
+                    //Expiration, CVV
+                    if (expiration.value != "") {
+                        s[9].style.display = 'none';
+                    }
+
+                    if (cvv.value != "") {
+                        s[10].style.display = 'none';
+                    }
+
+                    //Order day
+                    if (order_day.value != "") {
+                        s[11].style.display = 'none';
+                    }
+
+
+
+
+                }
+
+                name1.addEventListener('input', handle);
+                name2.addEventListener('input', handle);
+                username.addEventListener('input', handle);
+                address.addEventListener('input', handle);
+                country.addEventListener('input', handle);
+                state.addEventListener('input', handle);
+                zip.addEventListener('input', handle);
+                oncard.addEventListener('input', handle);
+                credit.addEventListener('input', handle);
+                expiration.addEventListener('input', handle);
+                cvv.addEventListener('input', handle);
+                order_day.addEventListener('input', handle);
 
 
                 //제출 버튼을 눌렀을 때
 
                 check.addEventListener('click', function (event) {
-
+                    t = false;
                     //name
-                    if (name1 === "" || name2.value === "") {
-                        alert("Input name!");
-                        event.preventDefault();
-                        return;
+                    if (name1.value === "") {
+                        s[0].style.display = 'block';
+                        t = true;
+                    }
+                    if (name2.value === "") {
+                        s[1].style.display = 'block';
+                        t = true;
                     }
                     //username
                     if (username.value === "") {
-                        alert("Input user name!");
-                        event.preventDefault();
-                        return;
+                        s[2].style.display = 'block';
+
+                        t = true;
                     }
 
                     //email은 option!
 
                     //Address
                     if (address.value === "") {
-                        address.innerHTML("Input address!");
-                        event.preventDefault();
-                        address.innerHTML("Input address!");
-                        
-                        return;
+                        s[3].style.display = 'block';
+
+                        t = true;
                     }
                     //Country, State, Zip!
                     if (country.value === "Choose...") {
-                        alert("Select Country!");
-                        event.preventDefault();
-                        return;
+                        s[4].style.display = 'block';
+
+                        t = true;
                     }
                     if (state.value === "Choose...") {
-                        alert("Select State!");
-                        event.preventDefault();
-                        return;
+                        s[5].style.display = 'block';
+
+                        t = true;
                     }
                     if (zip.value === "") {
-                        alert("Input zip!");
-                        event.preventDefault();
-                        return;
+                        s[6].style.display = 'block';
+
+                        t = true;
                     }
 
-                    //checkbox Agreement
-                    if (!check1.checked || !check2.checked) {
-                        alert("Check checkbox!");
-                        event.preventDefault();
-                        return;
-                    }
+                    //checkbox Agreement is OK
 
 
 
-                    //Payment (radio)
-                    if (!payment1.checked && !payment2.checked && !payment3.checked) {
-                        alert("Check payment!");
-                        event.preventDefault();
-                        return;
-                    }
+
+                    //Payment (radio) is OK
 
                     //Name on card, Credit card number
                     if (oncard.value === "") {
-                        alert("Input Name on card!");
-                        event.preventDefault();
-                        return;
+                        s[7].style.display = 'block';
+
+                        t = true;
                     }
 
                     if (credit.value === "") {
-                        alert("Input Credit card number!");
-                        event.preventDefault();
-                        return;
+                        s[8].style.display = 'block';
+
+                        t = true;
                     }
                     //Expiration, CVV
                     if (expiration.value === "") {
-                        alert("Input Expiration!");
-                        event.preventDefault();
-                        return;
+                        s[9].style.display = 'block';
+
+                        t = true;
                     }
 
                     if (cvv.value === "") {
-                        alert("Input CVV!");
-                        event.preventDefault();
-                        return;
+                        s[10].style.display = 'block';
+
+                        t = true;
                     }
 
                     //Order day
                     if (order_day.value === "") {
-                        alert("Check day!");
-                        event.preventDefault();
-                        return;
-                    }
-                        
-                    
+                        s[11].style.display = 'block';
 
-                    alert("Submit!!");
+                        t = true;
+                    }
+
+                    if (t) {
+                        alert("yOU NEED TO INTER INFORMATION!!");
+                        event.preventDefault();
+                    } else { alert("Submit!!"); }
+
+
+
 
                 });
 
