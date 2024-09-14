@@ -4,31 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic web page</title>
     <style>
-        body{
-            width:70%;
+        body {
+            width: 70%;
             margin-left: 15%;
             text-align: center;
             margin-top: 10%;
         }
-        input{
-            height:35px;
-            border:solid gray 2px;
+
+        input {
+            height: 35px;
+            border: solid gray 2px;
             border-radius: 5px;
-            
+
         }
-        button{
-            width:50px;
-            color:white;
-            border:solid gray 2px;
+
+        button {
+            width: 50px;
+            color: white;
+            border: solid gray 2px;
             border-radius: 5px;
-            padding:0%;
+            padding: 0%;
         }
-        .wordArea{
+
+        .wordArea {
             margin-top: 30px;
             margin-left: 25%;
-            width:50%;
+            width: 50%;
             background-color: aquamarine;
         }
     </style>
@@ -36,42 +39,53 @@
 </head>
 
 <body>
-    <h1>Dynamic Web page</h1>
-    
-    
-    <input type="text" id="input_append" />
-    <button onclick="listener_append()" style="background-color:blue">추가</button>
-    <button onclick="delete_all()" style="background-color:green">삭제</button>
-    <div id="div_append" class="wordArea">
-
-    </div>
 
     <script>
         function listener_append() {
             let div_append = document.getElementById("div_append");
             let input_append = document.getElementById("input_append").value;
-            if (input_append == "" || input_append == "underfined") {
+            if (input_append == "" || input_append == "undefined") {
                 return false;
             }
+
             let words = input_append.split(',');
             let i = 0;
-            while(true){
-                if(words[i]==null){
+            while (true) {
+                if (words[i] == null) {
                     break;
                 }
+                words[i] = words[i].trim();
                 div_append.innerHTML += "<div onclick='listener_remove(this)'>" + words[i] + "</div>";
                 i++;
-                
+
             }
             document.getElementById("input_append").value = "";
         }
-
+        function listener_remove(element) {
+            element.remove();
+        }
         function delete_all() {
             let div_append = document.getElementById('div_append');
             div_append.innerHTML = "";
             document.getElementById("input_append").value = "";
         }
+
+        window.onload = function () {
+            document.querySelector('button[style*="background-color:blue"]').onclick = listener_append;
+            document.querySelector('button[style*="background-color:green"]').onclick = delete_all;
+        }
     </script>
+
+    <h1>Dynamic Web page</h1>
+
+
+    <input type="text" id="input_append" />
+    <button style="background-color:blue">추가</button>
+    <button style="background-color:green">삭제</button>
+    <div id="div_append" class="wordArea">
+    </div>
+
+
 </body>
 
 </html>
