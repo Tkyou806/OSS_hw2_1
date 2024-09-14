@@ -53,13 +53,17 @@
             if (input_append == "" || input_append == "underfined") {
                 return false;
             }
-            let words = str.split(',');     
-            div_append.innerHTML += "<div onclick='listener_remove(this)'>" + words + "</div>";
+            let words = input_append.split(',');
+            let i = 0;
+            while(true){
+                if(words[i]==null){
+                    break;
+                }
+                div_append.innerHTML += "<div onclick='listener_remove(this)'>" + words[i] + "</div>";
+                i++;
+                
+            }
             document.getElementById("input_append").value = "";
-        }
-
-        function listener_remove(obj) {
-            obj.remove();
         }
 
         function delete_all() {
