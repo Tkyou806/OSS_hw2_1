@@ -49,6 +49,7 @@
         }
 
         input[type=text],
+        input[type=number],
         input[type=email],
         input[type=date],
         textarea {
@@ -226,7 +227,7 @@
     </div>
     <br>
     <br>
-    <form action="/action_form.php">
+    <form id="form1" action="action_OK.php">
         <div id="div_2"><!--오른쪽 박스 :얘도 이렇게 마추니까 편하다-->
             <div>
                 <div>
@@ -263,12 +264,12 @@
                 <div id="div_side" style="margin-top:15px;border-radius:5px;">
                     <div style="float:left;width:70%;">
                         <lable for="Promote">
-                            <input type="text" id="Promote">
+                            <input type="text" id="Promote" placeholder="Promote code" onchange="">
                         </lable>
                     </div>
                     <div style="float:right;width:30%;margin-left:0%;">
                         <label for="Submit"></label>
-                        <input type="submit" id="Submit" value="Redeem"></a>
+                        <input type="button" id="Submit" value="Redeem"></a>
                     </div>
                     <br>
                     <br>
@@ -284,9 +285,9 @@
             <!--1.text - 총 4개-->
             <div style="float:left;width:50%">
 
-                <label for="First_name">First name</label>
+                <label for="First_name" >First name</label>
                 <br>
-                <input type="text" id="First_name" class="input_pair" name="first_name">
+                <input type="text" id="First_name" class="input_pair" name="first_name" required>
                 <br>
             </div>
             <div style="float:right;width:50%">
@@ -303,22 +304,22 @@
                         style="float:left;background-color:#E9ECEF; border:solid #6C757D 1px;width:30px;height:36px;text-align:center;vertical-align: bottom; border-radius:5px 0px 0px 5px;">
                         @</div>
                     <div style="float:right;width:calc(100% - 31.6px);">
-                        <input type="text" style="border-radius:0px 5px 5px 0px;" id="User_name" name="user_name">
+                        <input type="text" style="border-radius:0px 5px 5px 0px;" id="User_name" name="user_name" placeholder="Username" onchange="">
                     </div>
                 </div>
                 <br>
                 <label for="Email">Email (Optional)</label>
                 <br>
-                <input type="email" id="Email" name="email">
+                <input type="email" id="Email" name="email" placeholder="You@example.com" onchange="">
                 <br>
 
                 <label for="Address">Address</label>
                 <br>
-                <input type="text" id="Address" name="address">
+                <input type="text" id="Address" name="address" placeholder="1234 Main St" onchange="">
                 <br>
                 <label for="Address2">Address 2 (Optional)</label>
                 <br>
-                <input type="text" id="Address2" name="address2">
+                <input type="text" id="Address2" name="address2" placeholder="Apartment or suite" onchange="">
                 <br>
             </div>
             <!--2.select - 총 3개-->
@@ -345,7 +346,7 @@
                 <div style="float:left;width:25%">
                     <label for="Zip">Zip</label>
                     <br>
-                    <input type="text" id="Zip" name="zip">
+                    <input type="number" id="Zip" name="zip">
                     <br>
                 </div>
             </div>
@@ -359,13 +360,13 @@
                 <!--3.checkbox - 총 2개-->
                 <label for="Check_agree1">
 
-                    <input type="checkbox" id="Check_agree1" name="agree_1" value="Yes">
+                    <input type="checkbox" id="Check_agree1" name="agree_1">
 
                     Shipping address is the same as my billing address
                 </label>
                 <br>
                 <label for="Check_agree2">
-                    <input type="checkbox" id="Check_agree2" name="agree_2" value="Yes">
+                    <input type="checkbox" id="Check_agree2" name="agree_2">
                     Save this information for next time
 
                 </label>
@@ -387,15 +388,19 @@
                     <!--1.text - 총 8개-->
                     <label for="Name_on_card">Name on card</label>
                     <br>
-                    <input type="text" id="Name_on_card" class="input_pair" name="name_on_card">
+                    <input type="text" id="Name_on_card" class="input_pair" name="name_on_card" style="margin-bottom:0%">
+                    <a style="font-size:13px;color:gray">Full name as displayed on card</a>                           
+                    <br>
                     <br>
                 </div>
+                
                 <div style="float:right;width:50%">
                     <label for="Credit_card_number">Credit card number</label>
                     <br>
-                    <input type="text" id="Credit_card_number" name="credit_card_number">
+                    <input type="number" id="Credit_card_number" name="credit_card_number">
                     <br>
-
+                    <br>
+                    <br>
                 </div>
             </div>
             <div>
@@ -403,13 +408,13 @@
                     <div style="float:left;width:50%">
                         <label for="Expiration">Expiration</label>
                         <br>
-                        <input type="text" id="Expiration" class="input_pair" name="expiration">
+                        <input type="date" id="Expiration" class="input_pair" name="expiration">
                         <br>
                     </div>
                     <div style="float:right;width:50%">
                         <label for="CVV">CVV</label>
                         <br>
-                        <input type="text" id="CVV" style="width:90%;" name="cvv">
+                        <input type="number" id="CVV" style="width:90%;" name="cvv">
                         <br>
                     </div>
                 </div>
@@ -464,7 +469,136 @@
         
         -->
 
+            <script>
+                /*함수 관련*/
+                //이름 둘 다 집어넣기
+                let name1 = document.getElementById('First_name');
+                let name2 = document.getElementById('Last_name');
+                let username = document.getElementById('User_name');
+                let email = document.getElementById('Email');
+                let address = document.getElementById('Address');
+                let country = document.getElementById('Country');
+                let state = document.getElementById('State');
+                let zip = document.getElementById('Zip');
+                let check1 = document.getElementById('Check_agree1');
+                let check2 = document.getElementById('Check_agree2');
+                let payment1 = document.getElementById('Payment_1');
+                let payment2 = document.getElementById('Payment_2');
+                let payment3 = document.getElementById('Payment_3');
+                let oncard = document.getElementById('Name_on_card');
+                let credit = document.getElementById('Credit_card_number');
+                let expiration = document.getElementById('Expiration');
+                let cvv = document.getElementById('CVV');
+                let order_day = document.getElementById('Order_day');
 
+
+                let check = document.getElementById('continue');
+
+
+                //제출 버튼을 눌렀을 때
+
+                check.addEventListener('click', function (event) {
+
+                    //name
+                    if (name1 === "" || name2.value === "") {
+                        alert("Input name!");
+                        event.preventDefault();
+                        return;
+                    }
+                    //username
+                    if (username.value === "") {
+                        alert("Input user name!");
+                        event.preventDefault();
+                        return;
+                    }
+
+                    //email은 option!
+
+                    //Address
+                    if (address.value === "") {
+                        address.innerHTML("Input address!");
+                        event.preventDefault();
+                        address.innerHTML("Input address!");
+                        
+                        return;
+                    }
+                    //Country, State, Zip!
+                    if (country.value === "Choose...") {
+                        alert("Select Country!");
+                        event.preventDefault();
+                        return;
+                    }
+                    if (state.value === "Choose...") {
+                        alert("Select State!");
+                        event.preventDefault();
+                        return;
+                    }
+                    if (zip.value === "") {
+                        alert("Input zip!");
+                        event.preventDefault();
+                        return;
+                    }
+
+                    //checkbox Agreement
+                    if (!check1.checked || !check2.checked) {
+                        alert("Check checkbox!");
+                        event.preventDefault();
+                        return;
+                    }
+
+
+
+                    //Payment (radio)
+                    if (!payment1.checked && !payment2.checked && !payment3.checked) {
+                        alert("Check payment!");
+                        event.preventDefault();
+                        return;
+                    }
+
+                    //Name on card, Credit card number
+                    if (oncard.value === "") {
+                        alert("Input Name on card!");
+                        event.preventDefault();
+                        return;
+                    }
+
+                    if (credit.value === "") {
+                        alert("Input Credit card number!");
+                        event.preventDefault();
+                        return;
+                    }
+                    //Expiration, CVV
+                    if (expiration.value === "") {
+                        alert("Input Expiration!");
+                        event.preventDefault();
+                        return;
+                    }
+
+                    if (cvv.value === "") {
+                        alert("Input CVV!");
+                        event.preventDefault();
+                        return;
+                    }
+
+                    //Order day
+                    if (order_day.value === "") {
+                        alert("Check day!");
+                        event.preventDefault();
+                        return;
+                    }
+                        
+                    
+
+                    alert("Submit!!");
+
+                });
+
+
+
+
+
+
+            </script>
 
 
 
