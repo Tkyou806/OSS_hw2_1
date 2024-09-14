@@ -305,7 +305,8 @@
             <div style="float:right;width:50%">
                 <label for="Last_name">Last name</label>
                 <br>
-                <input type="text" id="Last_name" name="last_name" placeholder value required>
+                <input type="text" id="Last_name" name="last_name" style="margin-bottom: 0%;" placeholder value
+                    required>
                 <br>
                 <br>
                 <div class="feedback">
@@ -431,6 +432,7 @@
                     <br>
                     <br>
                     <br>
+                    <br>
                 </div>
             </div>
             <div>
@@ -468,9 +470,9 @@
 
 
             <!--6.textarea - 총 1개-->
-            <h3>Memo</h3>
             <div>
                 <textarea id="Memo" name="memo" style="width:50%;height:200px;"></textarea>
+                <h3>Memo</h3>
 
             </div>
 
@@ -695,7 +697,7 @@
                     }
 
                     if (t) {
-                        alert("yOU NEED TO INTER INFORMATION!!");
+                        alert("YOU NEED TO INTER INFORMATION!!");
                         event.preventDefault();
                     } else { alert("Submit!!"); }
 
