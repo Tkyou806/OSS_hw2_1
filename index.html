@@ -14,143 +14,145 @@
 
 <body>
     <!--제목-->
-    <div class="float-start display-6">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpFWAivrIsqUnj8i8wdFxsP-fhywLRhY26RA&s"
-            style="width: 40px;">
+    <div class="container">
+        <div class="float-start display-6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpFWAivrIsqUnj8i8wdFxsP-fhywLRhY26RA&s"
+                style="width: 40px;">
 
-        CD rental shop
+            CD rental shop
+            <br><br>
+        </div><br>
+        <!--버튼 라인-->
+        <div class="float-end">
+            <button type="button" class="btn btn-primary" onclick="location.href='add.html'">add</button>
+            <button type="button" class="btn btn-secondary">delete</button>
+            <button type="button" class="btn btn-success">list</button>
+            <button type="button" class="btn btn-danger" style="margin:5px;">edit</button>
+        </div><br>
 
-    </div><br>
-    <!--버튼 라인-->
-    <div class="float-end">
-        <button type="button" class="btn btn-primary">add</button>
-        <button type="button" class="btn btn-secondary">delete</button>
-        <button type="button" class="btn btn-success">list</button>
-        <button type="button" class="btn btn-danger" style="margin:5px;">edit</button>
-    </div><br>
+        <!--영화CD 목록 만들기 10개 이상보이게!-->
+        <table class="table table-striped">
+            <tr>
+                <td class="col-1">#</td>
+                <td class="col-4">Title</td>
+                <td class="col-2">rate</td>
+                <td class="col-2">directer</td>
+                <td class="col-2">price</td>
+                <td class="col-2">janre</td>
+                <td class="col-2">nation</td>
+                <td class="col-2">state</td>
 
-    <!--영화CD 목록 만들기 10개 이상보이게!-->
-    <table class="table table-striped">
-        <tr>
-            <td class="col-1">#</td>
-            <td class="col-4">Title</td>
-            <td class="col-2">rate</td>
-            <td class="col-2">directer</td>
-            <td class="col-2">price</td>
-            <td class="col-2">janre</td>
-            <td class="col-2">nation</td>
-            <td class="col-2">state</td>
+            </tr>
 
-        </tr>
+            <tr>
+                <td class="col-1">1</td>
+                <td class="col-4">기생충</td>
+                <td class="col-2">***</td>
+                <td class="col-2">봉준호</td>
+                <td class="col-2">3000</td>
+                <td class="col-2">가족</td>
+                <td class="col-2">한국</td>
+                <td class="col-2">불가</td>
+            </tr>
 
-        <tr>
-            <td class="col-1">1</td>
-            <td class="col-4">기생충</td>
-            <td class="col-2">***</td>
-            <td class="col-2">봉준호</td>
-            <td class="col-2">3000</td>
-            <td class="col-2">가족</td>
-            <td class="col-2">한국</td>
-            <td class="col-2">불가</td>
-        </tr>
+            <tr>
+                <td class="col-1">2</td>
+                <td class="col-4">인셉션</td>
+                <td class="col-2">*****</td>
+                <td class="col-2">크리스퍼 놀란</td>
+                <td class="col-2">3000</td>
+                <td class="col-2">판타지</td>
+                <td class="col-2">미국</td>
+                <td class="col-2">가능</td>
+            </tr>
 
-        <tr>
-            <td class="col-1">2</td>
-            <td class="col-4">인셉션</td>
-            <td class="col-2">*****</td>
-            <td class="col-2">크리스퍼 놀란</td>
-            <td class="col-2">3000</td>
-            <td class="col-2">판타지</td>
-            <td class="col-2">미국</td>
-            <td class="col-2">가능</td>
-        </tr>
+            <tr>
+                <td class="col-1">3</td>
+                <td class="col-4">E.T</td>
+                <td class="col-2">***</td>
+                <td class="col-2">스티븐 스필버그</td>
+                <td class="col-2">2500</td>
+                <td class="col-2">가족</td>
+                <td class="col-2">미국</td>
+                <td class="col-2">가능</td>
+            </tr>
 
-        <tr>
-            <td class="col-1">3</td>
-            <td class="col-4">E.T</td>
-            <td class="col-2">***</td>
-            <td class="col-2">스티븐 스필버그</td>
-            <td class="col-2">2500</td>
-            <td class="col-2">가족</td>
-            <td class="col-2">미국</td>
-            <td class="col-2">가능</td>
-        </tr>
+            <tr>
+                <td class="col-1">4</td>
+                <td class="col-4">극한 직업</td>
+                <td class="col-2">****</td>
+                <td class="col-2">이병헌</td>
+                <td class="col-2">3000</td>
+                <td class="col-2">시트콤</td>
+                <td class="col-2">한국</td>
+                <td class="col-2">불가</td>
+            </tr>
+            <tr>
+                <td class="col-1">5</td>
+                <td class="col-4">글래디에이터</td>
+                <td class="col-2">***</td>
+                <td class="col-2">리들리 스콧</td>
+                <td class="col-2">2000</td>
+                <td class="col-2">전쟁</td>
+                <td class="col-2">미국</td>
+                <td class="col-2">가능</td>
+            </tr>
 
-        <tr>
-            <td class="col-1">4</td>
-            <td class="col-4">극한 직업</td>
-            <td class="col-2">****</td>
-            <td class="col-2">이병헌</td>
-            <td class="col-2">3000</td>
-            <td class="col-2">시트콤</td>
-            <td class="col-2">한국</td>
-            <td class="col-2">불가</td>
-        </tr>
-        <tr>
-            <td class="col-1">5</td>
-            <td class="col-4">글래디에이터</td>
-            <td class="col-2">***</td>
-            <td class="col-2">리들리 스콧</td>
-            <td class="col-2">2000</td>
-            <td class="col-2">전쟁</td>
-            <td class="col-2">미국</td>
-            <td class="col-2">가능</td>
-        </tr>
+            <tr>
+                <td class="col-1">6</td>
+                <td class="col-4">타이타닉</td>
+                <td class="col-2">*****</td>
+                <td class="col-2">제임스 카메론</td>
+                <td class="col-2">2000</td>
+                <td class="col-2">사랑</td>
+                <td class="col-2">미국</td>
+                <td class="col-2">불가</td>
+            </tr>
 
-        <tr>
-            <td class="col-1">6</td>
-            <td class="col-4">타이타닉</td>
-            <td class="col-2">*****</td>
-            <td class="col-2">제임스 카메론</td>
-            <td class="col-2">2000</td>
-            <td class="col-2">사랑</td>
-            <td class="col-2">미국</td>
-            <td class="col-2">불가</td>
-        </tr>
+            <tr>
+                <td class="col-1">7</td>
+                <td class="col-4">세얼간이</td>
+                <td class="col-2">***</td>
+                <td class="col-2">라지쿠마르 히라니</td>
+                <td class="col-2">2500</td>
+                <td class="col-2">가족</td>
+                <td class="col-2">인도</td>
+                <td class="col-2">불가</td>
+            </tr>
 
-        <tr>
-            <td class="col-1">7</td>
-            <td class="col-4">세얼간이</td>
-            <td class="col-2">***</td>
-            <td class="col-2">라지쿠마르 히라니</td>
-            <td class="col-2">2500</td>
-            <td class="col-2">가족</td>
-            <td class="col-2">인도</td>
-            <td class="col-2">불가</td>
-        </tr>
+            <tr>
+                <td class="col-1">8</td>
+                <td class="col-4">마더</td>
+                <td class="col-2">***</td>
+                <td class="col-2">봉준호</td>
+                <td class="col-2">1500</td>
+                <td class="col-2">추리</td>
+                <td class="col-2">한국</td>
+                <td class="col-2">가능</td>
+            </tr>
+            <tr>
+                <td class="col-1">9</td>
+                <td class="col-4">친절한 금자씨</td>
+                <td class="col-2">**</td>
+                <td class="col-2">박찬욱</td>
+                <td class="col-2">1500</td>
+                <td class="col-2">스릴러</td>
+                <td class="col-2">한국</td>
+                <td class="col-2">불가</td>
+            </tr>
 
-        <tr>
-            <td class="col-1">8</td>
-            <td class="col-4">마더</td>
-            <td class="col-2">***</td>
-            <td class="col-2">봉준호</td>
-            <td class="col-2">1500</td>
-            <td class="col-2">추리</td>
-            <td class="col-2">한국</td>
-            <td class="col-2">가능</td>
-        </tr>
-        <tr>
-            <td class="col-1">9</td>
-            <td class="col-4">친절한 금자씨</td>
-            <td class="col-2">**</td>
-            <td class="col-2">박찬욱</td>
-            <td class="col-2">1500</td>
-            <td class="col-2">스릴러</td>
-            <td class="col-2">한국</td>
-            <td class="col-2">불가</td>
-        </tr>
-
-        <tr>
-            <td class="col-1">10</td>
-            <td class="col-4">라푼젤</td>
-            <td class="col-2">****</td>
-            <td class="col-2">바이런 하워드</td>
-            <td class="col-2">2000</td>
-            <td class="col-2">가족</td>
-            <td class="col-2">미국</td>
-            <td class="col-2">불가</td>
-        </tr>
-    </table>
+            <tr>
+                <td class="col-1">10</td>
+                <td class="col-4">라푼젤</td>
+                <td class="col-2">****</td>
+                <td class="col-2">바이런 하워드</td>
+                <td class="col-2">2000</td>
+                <td class="col-2">가족</td>
+                <td class="col-2">미국</td>
+                <td class="col-2">불가</td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
