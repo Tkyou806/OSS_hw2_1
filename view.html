@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <link href="./my.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--값을 불러와야 하고 일단 틀을 만들고 그 안에 들어가게끔 해야겠다.-->
+    <div class="container">
+        <div class="float-start display-6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpFWAivrIsqUnj8i8wdFxsP-fhywLRhY26RA&s"
+                style="width: 40px;">
+
+            CD rental shop
+            <br><br>
+        </div><br>
+        <!--버튼 라인-->
+        <div class="float-end">
+            <button type="button" class="btn btn-secondary viewer_button1" onclick="location.href='edit.html'"
+                style="margin:5px;">edit</button>
+            <button type="button" class="btn btn-danger viewer_button2" onclick="confirm('게시물을 삭제할까요?');">delete</button>
+            <button type="button" class="btn btn-success viewer_button3" onclick="location.href='index.html'">list</button>
+        </div><br><br><br><br><br><br><br>
+        <div class="container viewer">
+            <div class="display-7">Title</div>
+            <div class="info" id="info-title"></div>
+
+            <div class="display-7">Rate</div>
+            <div class="info" id="info-rate"></div>
+
+            <div class="display-7">Director</div>
+            <div class="info" id="info-director"></div>
+
+            <div class="display-7">Price</div>
+            <div class="info" id="info-price"></div>
+
+            <div class="display-7">Janre</div>
+            <div class="info" id="info-janre"></div>
+
+            <div class="display-7">Nation</div>
+            <div class="info" id="info-nation"></div>
+
+            <div class="display-7">State</div>
+            <div class="info" id="info-state">
+
+            </div>
+        </div>
+        <script>
+            // sessionStorage에서 저장된 데이터를 가져오기
+            let title = sessionStorage.getItem('title');
+            let rate = sessionStorage.getItem('rate');
+            let director = sessionStorage.getItem('director');
+            let price = sessionStorage.getItem('price');
+            let janre = sessionStorage.getItem('janre');
+            let nation = sessionStorage.getItem('nation');
+            let state = sessionStorage.getItem('state');
+
+            // 가져온 데이터를 현재 페이지에 표시하자
+            document.getElementById('info-title').innerText = title;
+            document.getElementById('info-rate').innerText = rate;
+            document.getElementById('info-director').innerText = director;
+            document.getElementById('info-price').innerText = price;
+            document.getElementById('info-janre').innerText = janre;
+            document.getElementById('info-nation').innerText = nation;
+            document.getElementById('info-state').innerText = state;
+
+
+        </script>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+
+}
+
+.col-1 {
+  font-weight: bold;
+}
+
+.Title:hover {
+  color: rgb(101, 101, 208);
+}
+
+.display-6 {
+  color: rgb(63, 63, 243);
+  font-size: 50px;
+}
+
+#index_button {
+  position: static;
+  right: 20px;
+  bottom: 15px;
+  width: 100px;
+  height: 50px;
+  background-color: #3F3FF3;
+  border: #c9bbdf;
+}
+
+.add {
+  float: right;
+  margin: 10px;
+  width: 100px;
+  background-color: #5d45d4;
+  border: #5d45d4;
+}
+
+.viewer {
+  background-color: #4e4ed2;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+
+}
+
+.viewer_button1 {
+  background-color:#5e5ef4;
+  border: #ac8ce0;
+}
+
+.viewer_button2 {
+  background-color:#3F3FF3;
+  border: #6531b9;
+}
+
+.viewer_button3 {
+  background-color: #0e0ef4;
+  border: #4b199c;
+}
+
+.viewer_button1:hover {
+  background-color: #4d376f;
+  border: #ac8ce0;
+}
+
+.viewer_button2:hover {
+  background-color: #4d376f;
+  border: #6531b9;
+}
+
+.viewer_button3:hover {
+  background-color: #4d376f;
+  border: #4b199c;
+}
+
+
+
+.edit {
+  float: right;
+  margin: 5px;
+  width: 150px;
+  background-color: #503ed2;
+  border: none;
+}
+
+.edit:hover {
+  float: right;
+  margin: 5px;
+  width: 150px;
+  background-color: #3322b4;
+  border: none;
+}
+
+
+
+@media only screen and (max-width:600px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #c9bbdf;
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  
+  #index_button {
+    position: relative;
+    right: 20px;
+    width: 75px;
+    height: 50px;
+    background-color: #7931ec;
+    border: #6419dd;
+  }
+
+  .add {
+    float: left;
+    margin: 10px;
+    width: 45%;
+    background-color: #7931ec;
+    border: #6419dd;
+  }
+
+  .table {
+    border: 1px rgb(119, 98, 194);
+  }
+
+  .display-6 {
+    text-align: center;
+  }
+
+  .viewer {
+    background-color: #C9BBDF;
+    text-align: center;
+    font-weight: bold;
+
+  }
+
+  .viewer_button1 {
+    position: absolute;
+    bottom: 25px;
+    right: 66%;
+    width: 30%;
+    background-color: #ac8ce0;
+    border: #ac8ce0;
+  }
+
+  .viewer_button2 {
+    position: absolute;
+    bottom: 30px;
+    right: 33%;
+    width: 30%;
+
+
+    background-color: #6531b9;
+    border: #6531b9;
+  }
+
+  .viewer_button3 {
+    position: absolute;
+    bottom: 30px;
+    right: 1%;
+    width: 30%;
+    background-color: #4b199c;
+    border: #4b199c;
+  }
+
+  .edit {
+    float: left;
+    margin: 10px;
+    width: 45%;
+    background-color: #7931ec;
+    border: #6419dd;
+  }
+
+  .edit:hover {
+    float: left;
+    margin: 10px;
+    width: 45%;
+    background-color: #2f0770;
+    border: #3d2565;
+  }
+
+
+
+}

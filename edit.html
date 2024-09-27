@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link href="./my.css" rel="stylesheet">
+        <link href="./my.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         </div><br>
 
         <!--Form받는 거 만들자.-->
-        <form onclick="alertSubmit();" class="row g-3 needs-validation" id="my_form" novalidate>
+        <form class="row g-3 needs-validation" id="my_form" novalidate>
             <div class="col-md-4">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="title" required>
@@ -83,7 +83,7 @@
             <div class="col-md-3">
                 <label for="state" class="form-label">State</label>
                 <select class="form-select" id="state" required>
-                    <option selected disabled value="">Choose...</option>
+                    <option selected disabled>Choose...</option>
                     <option>대출 가능</option>
                     <option>대출 불가</option>
                 </select>
@@ -93,8 +93,8 @@
             </div>
 
             <div class="col-12">
-                <button class="btn btn-primary add" type="submit" onclick="alert('게시물이 추가됩니다');">확인</button>
-                <button class="btn btn-primary add" type="button" onclick="location.href='index.html'">취소</button>
+                <button class="btn btn-primary edit" type="submit" id="submited" onclick="confirm('수정하시겠습니까?')">확인</button>
+                <button class="btn btn-primary edit" type="button" onclick="location.href='index.html'">취소</button>
             </div>
         </form>
         <br><br><br><br>
@@ -103,7 +103,7 @@
 
             (() => {
                 'use strict'
-                
+
                 const forms = document.querySelectorAll('.needs-validation')
 
                 //다 확인 후 넘어가게 만들기
@@ -123,7 +123,24 @@
 
 
 
+            // sessionStorage에서 저장된 데이터를 가져오기
+            let title = sessionStorage.getItem('title');
+            let rate = sessionStorage.getItem('rate');
+            let director = sessionStorage.getItem('director');
+            let price = sessionStorage.getItem('price');
+            let janre = sessionStorage.getItem('janre');
+            let nation = sessionStorage.getItem('nation');
 
+            // 가져온 데이터를 현재 페이지에 표시하자
+            document.getElementById('title').value = title ? title : '';
+            document.getElementById('rate').value = rate ? rate : '';
+            document.getElementById('director').value = director ? director : '';
+            document.getElementById('price').value = price ? price : '';
+            document.getElementById('janre').value = janre ? janre : '';
+            document.getElementById('nation').value = nation ? nation : '';
+            
+
+            
 
 
         </script>
