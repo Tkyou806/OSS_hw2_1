@@ -159,19 +159,18 @@
     </div>
     <br><br><br>
     <script>
-        // 'view' 클래스를 가진 모든 요소를 선택
         let viewElements = document.getElementsByClassName('Title');
         // 각 요소에 이벤트 리스너 추가
         for (let i = 0; i < viewElements.length; i++) {
             viewElements[i].addEventListener('click', function () {
-                location.href = 'view.html'; // 클릭 시 페이지 이동
-                let Title = this.innerText; // 영화 제목
-                let Rate = this.parentNode.querySelector('.Rate').innerText; // 영화 제목
-                let Director = this.parentNode.querySelector('.Director').innerText; // 감독 정보
-                let Price = this.parentNode.querySelector('.Price').innerText; // 감독 정보
-                let Janre = this.parentNode.querySelector('.Janre').innerText; // 감독 정보
-                let Nation = this.parentNode.querySelector('.Nation').innerText; // 감독 정보
-                let State = this.parentNode.querySelector('.State').innerText; // 감독 정보
+                location.href = 'view.html'; // 클릭 시 페이지 이동하자
+                let Title = this.innerText;
+                let Rate = this.parentNode.querySelector('.Rate').innerText;
+                let Director = this.parentNode.querySelector('.Director').innerText;
+                let Price = this.parentNode.querySelector('.Price').innerText;
+                let Janre = this.parentNode.querySelector('.Janre').innerText;
+                let Nation = this.parentNode.querySelector('.Nation').innerText;
+                let State = this.parentNode.querySelector('.State').innerText;
 
 
                 sessionStorage.setItem('title', Title);
