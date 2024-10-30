@@ -1,12 +1,12 @@
 {
   "user": [
     {
-      "id": "1",
-      "name": "Joy Lee",
-      "age": "20",
-      "gender": "Woman",
+      "name": "joy Lee",
+      "age": "21",
+      "gender": "WOMAN",
       "country": "KOREA",
-      "job": "student"
+      "job": "student",
+      "id": "1"
     },
     {
       "id": "2",
@@ -87,14 +87,6 @@
       "gender": "Woman",
       "country": "JAPAN",
       "job": "student"
-    },
-    {
-      "id": "c9ae",
-      "name": "Stoa Heo ",
-      "age": "26",
-      "gender": "WOMAN",
-      "country": "KOREA",
-      "job": "author"
     }
   ]
 }
