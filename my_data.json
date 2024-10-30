@@ -65,12 +65,12 @@
       "job": "artist"
     },
     {
-      "id": "9",
       "name": "chun hong",
-      "age": "65",
-      "gender": "Woman",
+      "age": "66",
+      "gender": "WOMAN",
       "country": "CHINA",
-      "job": "teacher"
+      "job": "math teacher",
+      "id": "9"
     },
     {
       "id": "10",
@@ -87,6 +87,14 @@
       "gender": "Woman",
       "country": "JAPAN",
       "job": "student"
+    },
+    {
+      "id": "c9ae",
+      "name": "Stoa Heo ",
+      "age": "26",
+      "gender": "WOMAN",
+      "country": "KOREA",
+      "job": "author"
     }
   ]
 }
