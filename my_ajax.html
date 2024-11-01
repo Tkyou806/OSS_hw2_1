@@ -20,7 +20,10 @@
             font-size: 3rem;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-
+        #p_ajax {
+            font-size: 1rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
         .div_jone {
             font-size: 1.5rem;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -43,14 +46,19 @@
     <div id="div_ajax">AJAX CRUD</div>
     <br><br><br>
 
-    <div class="div_jone">Create & Update Jone</div>
+    <div class="div_jone">Create & Update Jone & Delete Jone</div>
+    <p id="p_ajax">If you want to create, Input data (withdout id) and click "create data"!<br>
+        If you want to update, Input id and another data and click "update data"!<br>
+        If you want to delete, Input id and click "delete data"!
+    </p>
+
     <button id="updateData" class="button_ajax" onclick="updateDataToJson()" style="float:right">Update Data</button>
     <div style="float:right; margin-right:20px">
         id : <input type="text" id="find_id">
     </div>
     <br><br>
     <button id="deleteData" class="button_ajax" onclick="deleteDataToJson()" style="float:right">Delete Data</button>
-        
+
     <br><br>
     name : <input type="text" id="name">
     age : <input type="number" id="age">
